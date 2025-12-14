@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Luckiest+Guy&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  width: 100%;
+}
+
+.container {
+display: flex;
+
+}
+.WeatherVisual {
+  display: grid;
+  grid-template-rows: 100px 200px 50px 50px;
+  background: rgb(0, 0, 0);
+  color: white;
+  align-items: center;
+  justify-content: start;
+  padding-left: 40px;
+  width: 300px;
+  height: 450px;
+}
+
+.countryInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.country-name {
+  margin: 0;
+  display: flex;
+  font-weight: bold;
+  font-size: 25px;
+  flex-direction: row-reverse;
+  gap: 5px;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.country-name i {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+.todaydate {
+  margin: 0;
+}
+.dateToday {
+  margin: 0;
+}

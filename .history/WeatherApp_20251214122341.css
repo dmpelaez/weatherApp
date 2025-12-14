@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  width: 100%;
+}
+
+.container {
+display: flex;
+
+}
+.WeatherVisual {
+  display: grid;
+  grid-template-rows: 100px 200px 50px 50px;
+  background: rgb(0, 0, 0);
+  color: white;
+  align-items: center;
+  justify-content: start;
+  padding-left: 40px;
+  width: 300px;
+  height: 450px;
+}
+
+.countryInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.country-name {
+  margin: 0;
+  display: flex;
+  font-weight: bold;
+  font-size: 25px;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+.country-name i {
+  color: rgb(255, 255, 255);
+  width: 20px;
+}
+.todaydate {
+  margin: 0;
+}
+.dateToday {
+  margin: 0;
+}

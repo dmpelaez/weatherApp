@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  width: 100%;
+}
+
+.container {
+display: flex;
+
+}
+.WeatherVisual {
+  display: grid;
+  grid-template-rows: 100px 200px 50px 50px;
+  background: black;
+  color: white;
+  align-items: center;
+  justify-content: start;
+  padding-left: 40px;
+  width: 300px;
+  height: 450px;
+}
+
+.countryInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.country-name {
+  margin: 0;
+}
+.todaydate {
+  margin: 0;
+}
+.dateToday {
+  margin: 0;
+}
