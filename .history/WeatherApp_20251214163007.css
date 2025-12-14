@@ -116,10 +116,9 @@ position: relative;
   align-items: start;
   justify-content: center;
   Padding: 20px;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   
-  border-bottom-right-radius: 10px;
-   border-top-right-radius: 10px;
+  border-left-right-radius: 10px;
 }
 .weather-title {
   display: Flex;
@@ -127,7 +126,7 @@ position: relative;
   justify-content: center;
   color: white;
   background: linear-gradient(90deg, blue, cyan);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

@@ -133,7 +133,7 @@ position: relative;
 
 .weather-info-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: rows;
 }
 .inputWeather {
   display: flex;

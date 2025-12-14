@@ -127,7 +127,7 @@ position: relative;
   justify-content: center;
   color: white;
   background: linear-gradient(90deg, blue, cyan);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
