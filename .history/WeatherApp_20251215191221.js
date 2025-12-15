@@ -166,6 +166,7 @@ console.log(navigator.permissions.query({name: 'geolocation'})
 
   console.log(navigator.geolocation.getCurrentPosition(position => {
     fetchWeather(position.coords.latitude, position.coords.longitude)
+ 
 
   }));
   

@@ -1,7 +1,7 @@
 {
   "liveServer.settings.fullReload": true,
   "liveServer.settings.wait": 0,
-  "liveServer.settings.port": 5501,
+  "liveServer.settings.port": 5500,
   "files.watcherExclude": {
   "**/yourfile.js": false
 }

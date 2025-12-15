@@ -35,10 +35,7 @@ async function weatherApp(city) {
 
   iconElement.src = iconUrl;
 
-//This part is ai generated//
-//switch also acts as IF statement where I use the switch 
-//to trigger types of icon where CASE is the syntax to meet the specific condition
-// and break to stop it and the default shows the design
+
  switch (iconCode) {
 
   // ☀️ CLEAR SKY
@@ -164,10 +161,9 @@ console.log(navigator.permissions.query({name: 'geolocation'})
 
 
 
-  console.log(navigator.geolocation.getCurrentPosition(position => {
+  navigator.geolocation.getCurrentPosition(position => {
     fetchWeather(position.coords.latitude, position.coords.longitude)
-
-  }));
+  })
   
 
 

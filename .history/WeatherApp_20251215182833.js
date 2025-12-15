@@ -31,94 +31,8 @@ async function weatherApp(city) {
 
   const iconCode = data.weather[0].icon;
   const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
-  const iconElement = document.querySelector('.img');
 
-  iconElement.src = iconUrl;
-
-//This part is ai generated//
-//switch also acts as IF statement where I use the switch 
-//to trigger types of icon where CASE is the syntax to meet the specific condition
-// and break to stop it and the default shows the design
- switch (iconCode) {
-
-  // ☀️ CLEAR SKY
-  case "01d":
-    iconElement.style.filter = "brightness(1.25) saturate(1.2)";
-    break;
-  case "01n":
-    iconElement.style.filter = "brightness(0.7) contrast(1.2)";
-    break;
-
-  // 🌤️ FEW CLOUDS
-  case "02d":
-    iconElement.style.filter = "brightness(1.2) contrast(1.05)";
-    break;
-  case "02n":
-    iconElement.style.filter = "brightness(0.75) contrast(1.15)";
-    break;
-
-  // ☁️ SCATTERED CLOUDS
-  case "03d":
-    iconElement.style.filter = "brightness(1.15) contrast(1.05)";
-    break;
-  case "03n":
-    iconElement.style.filter = "brightness(0.8) contrast(1.1)";
-    break;
-
-  // 🌥️ BROKEN CLOUDS
-  case "04d":
-    iconElement.style.filter = "brightness(1.1) saturate(1.05)";
-    break;
-  case "04n":
-    iconElement.style.filter = "brightness(0.7) contrast(1.2) saturate(0.9)";
-    break;
-
-  // 🌧️ SHOWER RAIN
-  case "09d":
-    iconElement.style.filter = "brightness(1.1) saturate(1.1)";
-    break;
-  case "09n":
-    iconElement.style.filter = "brightness(0.75) contrast(1.15)";
-    break;
-
-  // 🌦️ RAIN
-  case "10d":
-    iconElement.style.filter = "brightness(1.15) saturate(1.1)";
-    break;
-  case "10n":
-    iconElement.style.filter = "brightness(0.75) contrast(1.15)";
-    break;
-
-  // 🌩️ THUNDERSTORM
-  case "11d":
-    iconElement.style.filter = "contrast(1.2) brightness(0.95)";
-    break;
-  case "11n":
-    iconElement.style.filter = "contrast(1.25) brightness(0.85)";
-    break;
-
-  // ❄️ SNOW
-  case "13d":
-    iconElement.style.filter = "brightness(1.2) saturate(0.9)";
-    break;
-  case "13n":
-    iconElement.style.filter = "brightness(0.85) saturate(0.8)";
-    break;
-
-  // 🌫️ MIST
-  case "50d":
-    iconElement.style.filter = "grayscale(0.3) brightness(1.1)";
-    break;
-  case "50n":
-    iconElement.style.filter = "grayscale(0.4) brightness(0.9)";
-    break;
-
-  // DEFAULT
-  default:
-    iconElement.style.filter = "none";
-}
-
-  
+  document.querySelector('.img').src = iconUrl;
 
   console.log(data);
   console.log(date1);
@@ -135,14 +49,12 @@ async function fetchWeather(lat, lon) {
   document.querySelector('.feelsLike').innerHTML = Math.round(data3.main.feels_like) + '°C';
   document.querySelector('.wind').innerHTML = data3.wind.speed + "km/h";
 
-  if (!searchBox.value) {
-     const iconCode = data3.weather[0].icon;
+  const iconCode = data3.weather[0].icon;
   const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
   
    
-   document.querySelector('.img').src = iconUrl;
-  }
-  
+     const nightRain = document.querySelector('.img');
+     nightRain.src = iconUrl;
     
   
 
@@ -164,10 +76,9 @@ console.log(navigator.permissions.query({name: 'geolocation'})
 
 
 
-  console.log(navigator.geolocation.getCurrentPosition(position => {
+  navigator.geolocation.getCurrentPosition(position => {
     fetchWeather(position.coords.latitude, position.coords.longitude)
-
-  }));
+  })
   
 
 
