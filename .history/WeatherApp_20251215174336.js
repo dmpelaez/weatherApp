@@ -8,7 +8,7 @@ const searchBox = document.querySelector('.weather');
 const searchBtn = document.querySelector('.searchBtn')
 
 
-async function weatherApp(city) {
+async function weatherApp(city, data3) {
   const response = await fetch(APIurl + city + `&appid=${APIkey}`);
   const response2 = await fetch(APIurl + "Philippines" + `&appid=${APIkey}`);
   const data2 = await response2.json();
@@ -55,18 +55,8 @@ async function fetchWeather(lat, lon) {
   console.log(data3);
 }
 
-console.log(navigator.permissions.query({name: 'geolocation'})
-.then (function(result) {
-  if (result.state === 'granted') {
 
-  } else if (result.state === 'prompt') {
 
-  } else if (result.state === 'denied') {
-
-  }
-  console.log(result.state);
-})
-);
 
 
 

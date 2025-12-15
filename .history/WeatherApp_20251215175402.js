@@ -8,7 +8,7 @@ const searchBox = document.querySelector('.weather');
 const searchBtn = document.querySelector('.searchBtn')
 
 
-async function weatherApp(city) {
+async function weatherApp(city, data3) {
   const response = await fetch(APIurl + city + `&appid=${APIkey}`);
   const response2 = await fetch(APIurl + "Philippines" + `&appid=${APIkey}`);
   const data2 = await response2.json();
