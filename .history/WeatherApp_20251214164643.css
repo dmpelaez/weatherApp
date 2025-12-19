@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Luckiest+Guy&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  width: 100%;
+  background-image: url("pexels-rinoadamo-35115057.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+display: flex;
+position: relative;
+
+
+}
+.WeatherVisual {
+  display: grid;
+  grid-template-rows: 100px 200px 50px 50px;
+   background: linear-gradient(90deg, blue, cyan);
+  color: white;
+  align-items: center;
+  justify-content: start;
+  padding-left: 40px;
+  width: 300px;
+  height: 450px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.countryInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.country-name {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+
+}
+.country2 {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+}
+.country-name i {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  display: inline-block;
+}
+.todaydate {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+}
+.dateToday {
+  margin: 0;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+.img {
+  width: 200px;
+  width: 100%;
+  
+  border-radius: 8px;
+  filter: sepia(1) saturate(5) hue-rotate(10deg) brightness(1.2);
+  
+}
+.temp-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.temp-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.temp {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+.description-div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.description-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.description {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.weatherInfos {
+  display: grid;
+  grid-template-rows:  80px 50px 200px;
+  width: 400px;
+  align-items: start;
+  justify-content: center;
+  Padding: 20px;
+  background-color: rgb(0, 0, 0);
+  
+  border-bottom-right-radius: 10px;
+   border-top-right-radius: 10px;
+}
+.weather-title {
+  display: Flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(90deg, blue, cyan);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.weather-info-box {
+  display: flex;
+  flex-direction: rows;
+}
+.inputWeather {
+  display: flex;
+  
+}
+.weather {
+  padding-left: 10px;
+  padding: 10px;
+  Width: 200px;
+  border: 1px solid gray;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: none;
+  border: none;
+  outline: none;
+   background: linear-gradient(90deg, blue, cyan);
+}
+ input[contenteditable="true"] {
+  color: white;
+}
+.weather::placeholder {
+  color: white;
+  
+
+}
+.searchBtn {
+  background: cyan;
+  color: rgb(24, 18, 18);
+  border: 1px solid gray;
+  border-left: none;
+  font-weight: bold;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.infos {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.humidity-div {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, blue, cyan);
+  padding: 5px;
+  border-radius: 10px;
+}
+.humidity-text {
+  font-family: "roboto"
+}
+.humidity {
+  font-family: "roboto";
+  color: black;
+}
+.feelslike-div {
+  display: flex;
+  justify-content: space-between;
+    background: linear-gradient(90deg, blue, cyan);
+  padding: 5px;
+  border-radius: 10px;
+}
+.feelsLike-text {
+  font-family: "roboto"
+}
+.feelsLike {
+  font-family: "roboto";
+  color: black;
+}
+.wind-div {
+   display: flex;
+  justify-content: space-between;
+    background: linear-gradient(90deg, blue, cyan);
+  padding: 5px;
+  border-radius: 10px;
+}
+.wind-text {
+  font-family: "roboto"
+}
+.wind {
+  font-family: "roboto";
+  color: black;
+}

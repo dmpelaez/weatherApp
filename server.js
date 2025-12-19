@@ -11,7 +11,7 @@ app.use(cors());
 
 app.get("/weather", async (req, res) => {
   const { q, city, lat, lon } = req.query;
-  const apiKey = process.env.WEATHER_API_KEY;
+  const apiKey = process.env.OPENWEATHER_API_KEY;
 
   try {
     let url;
