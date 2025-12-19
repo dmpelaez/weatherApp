@@ -10,8 +10,8 @@ const searchBtn = document.querySelector('.searchBtn')
 //after searching for it
 async function weatherApp(city) {
   const response = await fetch(`http://localhost:3000/weather?q=${city}`);
+
   const data = await response.json();
-  
   if (!data.name) {
     return alert("wrong");
   } 
@@ -126,18 +126,10 @@ async function weatherApp(city) {
 async function fetchWeather(lat, lon) {
   const response = await fetch(`http://localhost:3000/weather?lat=${lat}&lon=${lon}`);
   const data3 = await response.json();
-
-console.log("API response:", data3);
-
-    if (!data3.main) {
-    console.error("Weather data error:", data3);
-    document.querySelector('.description').innerHTML = data3.message || "Weather data not available";
-    return;
-  }
    document.querySelector('.country2').innerHTML = data3.name;
-   
+   /* 
   document.querySelector('.city').innerHTML = data3.sys.country;
-  
+  */
  console.log("API response:", data3);
   document.querySelector('.temp').innerHTML = Math.round(data3.main.temp) + '°C';
   document.querySelector('.description').innerHTML = data3.weather[0].description;

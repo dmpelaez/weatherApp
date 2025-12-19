@@ -9,9 +9,9 @@ const searchBtn = document.querySelector('.searchBtn')
 //This is the api to get the whole data of the city/country 
 //after searching for it
 async function weatherApp(city) {
-  const response = await fetch(`http://localhost:3000/weather?q=${city}`);
+  const response = await fetch(`/weather?q=${city}`);
+
   const data = await response.json();
-  
   if (!data.name) {
     return alert("wrong");
   } 
@@ -139,7 +139,7 @@ console.log("API response:", data3);
   document.querySelector('.city').innerHTML = data3.sys.country;
   
  console.log("API response:", data3);
-  document.querySelector('.temp').innerHTML = Math.round(data3.main.temp) + '°C';
+  document.querySelector('.temp').innerHTML = Math.round(data3.data.main.temp) + '°C';
   document.querySelector('.description').innerHTML = data3.weather[0].description;
   document.querySelector('.humidity').innerHTML = data3.main.humidity + "%";
   document.querySelector('.feelsLike').innerHTML = Math.round(data3.main.feels_like) + '°C';

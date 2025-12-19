@@ -9,14 +9,18 @@ const searchBtn = document.querySelector('.searchBtn')
 //This is the api to get the whole data of the city/country 
 //after searching for it
 async function weatherApp(city) {
-  const response = await fetch(`http://localhost:3000/weather?q=${city}`);
+  const response = await fetch(`/weather` + `?units=metric?q=${city}`);
+  const response2 = await fetch(APIurl + "Philippines" + `&appid=${APIkey}`);
+  const data2 = await response2.json();
   const data = await response.json();
-  
   if (!data.name) {
     return alert("wrong");
   } 
+  if (data.name) {
      document.querySelector('.country2').innerHTML = data.name; 
-
+  } else {
+    document.querySelector('.country2').innerHTML = data2.name; 
+  }
   
   document.querySelector('.city').innerHTML = data.sys.country;
   document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°C';
@@ -124,21 +128,10 @@ async function weatherApp(city) {
 //This function is focus on fetching my current location and displaying it as default 
 //where I put this function on navigator.geolocation.getcurrentposition
 async function fetchWeather(lat, lon) {
-  const response = await fetch(`http://localhost:3000/weather?lat=${lat}&lon=${lon}`);
+  const response = await fetch('/weather' + `?lat=${lat}` + `&lon=${lon}`);
   const data3 = await response.json();
-
-console.log("API response:", data3);
-
-    if (!data3.main) {
-    console.error("Weather data error:", data3);
-    document.querySelector('.description').innerHTML = data3.message || "Weather data not available";
-    return;
-  }
-   document.querySelector('.country2').innerHTML = data3.name;
-   
+   document.querySelector('.country2').innerHTML = data3.name; 
   document.querySelector('.city').innerHTML = data3.sys.country;
-  
- console.log("API response:", data3);
   document.querySelector('.temp').innerHTML = Math.round(data3.main.temp) + '°C';
   document.querySelector('.description').innerHTML = data3.weather[0].description;
   document.querySelector('.humidity').innerHTML = data3.main.humidity + "%";

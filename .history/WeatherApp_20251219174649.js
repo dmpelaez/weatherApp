@@ -10,8 +10,8 @@ const searchBtn = document.querySelector('.searchBtn')
 //after searching for it
 async function weatherApp(city) {
   const response = await fetch(`http://localhost:3000/weather?q=${city}`);
+
   const data = await response.json();
-  
   if (!data.name) {
     return alert("wrong");
   } 
